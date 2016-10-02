@@ -19,16 +19,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-eF-t8R">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Cv1-eF-t8R">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="100x110.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="eKI-8C-AbM">
-                                        <frame key="frameInset" width="335" height="217"/>
+                                        <frame key="frameInset" minX="118" width="100" height="217"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="70x130.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="uqu-Og-szY">
-                                        <frame key="frameInset" minY="217" width="335" height="130"/>
+                                        <frame key="frameInset" minX="133" minY="217" width="70" height="130"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="150x200.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="9Rz-c6-zTs">
-                                        <frame key="frameInset" minY="347" width="335" height="200"/>
+                                        <frame key="frameInset" minX="93" minY="347" width="150" height="200"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,13 +39,19 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Pgt-qB-mDR"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="AllignmentButton"/>
+                                        <connections>
+                                            <action selector="didTappedAllignmentButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1dV-mJ-u1V"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGb-wV-1cS">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="6Y9-xi-RUU"/>
                                         </constraints>
-                                        <state key="normal" title="Button"/>
+                                        <state key="normal" title="DistributionButton"/>
+                                        <connections>
+                                            <action selector="didTappedDistributionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vxb-CA-eA0"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
@@ -61,6 +67,10 @@
                             <constraint firstItem="Cv1-eF-t8R" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="vfa-0C-qtF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="allignmentButton" destination="FF1-kj-eyf" id="usq-SR-YHA"/>
+                        <outlet property="distributionButton" destination="rGb-wV-1cS" id="PTb-iR-ReC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
